@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML VIDEO PLAYER</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    <meat name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.js"></script></head>
+    	<style type="text/css">
+    		body{
+    			padding: 0px;
+    			margin:0px;
+    			box-sizing: border-box;
+          background-color: maroon;
+    		}
+    		.container{
+    			background:url(https://cdn.pixabay.com/photo/2015/01/31/05/05/background-618226_1280.png);
+    			image-rendering: auto;
+    			background-repeat: no-repeat;
+    			width: 100%;
+    			height:595px;
+    			position: center;
+    			margin-left: 110px;
+
+    		}
+    		
+    		.center{
+    		   
+    		   color:   #ffffff;      /* white*/
+    		   text-align: center;
+    		   position: absolute;
+    		   font-size: 90pt;
+    		   font-family: Courier New;
+    		   
+    		   top: 30%;
+    		   left: 50%;
+    		   transform: translate(-50%, -50%);
+    		}
+    		.accordion {
+  background-color: #AFEEEE;
+  color: #008B00;
+  font-family:Courier New;
+  font-size: 20pt;
+  cursor: pointer;
+  padding: 18px;
+  width: 200px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-left: 630px;
+  margin-bottom: 5px;
+}
+
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.r{
+	margin-left: 630px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family:Courier New;
+}
+.top{
+  margin-top: 10px;
+}
+    		
+
+    	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="center">HTML VIDEO PLAYER</h1>
+	</div>
+	<div class="top">
+		<button class="accordion" style="text-align:center; ">Watch Video</button>
+<div class="panel">
+  <a href="v.html"><p class="r">Watch From Dekstop</p></a>
+</div>
+
+<button class="accordion" style="text-align:center; ">Upload Video</button>
+<div class="panel">
+  <a href="http://localhost/new_task/upload.php"><p class="r">Uplaod Videos</p></a>
+</div>
+
+<button class="accordion" style="text-align:center; ">Feedback</button>
+<div class="panel">
+  <a href="http://localhost/contactUs/"><p class="r">Feedback Form</p></a>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	</div>
+
+
+</body>
+</html>

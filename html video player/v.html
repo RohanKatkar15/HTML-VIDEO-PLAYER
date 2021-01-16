@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>open video from your dekstop</title>
+
+  <link rel="stylesheet" href="styles.css"/>
+  <style type="text/css">
+    #upload{
+      width: 100px;
+      height: 30px;
+    }
+    #start{
+      width: 80px;
+      height: 30px;
+      background: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    #head{
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      font-size: 25pt;
+    }
+
+  </style>
+</head>
+<body >
+  <center>
+    <div>
+      <h1 id="head">OPEN VIDEO FROM YOUR DESKTOP</h1>
+    </div>
+  <div class="player">
+     <video class="player__video viewer" width="720" hight="480" id="video">
+         <source id="scr">
+       </video>
+
+     <div class="player__controls">
+       <div class="progress">
+        <div class="progress__filled"></div>
+       </div>
+       <button class="player__button toggle" title="Toggle Play">►</button>
+       <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+       <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+       <span class="current">00:00</span> / <span class="duration">00:00</span>
+       <button data-skip="-10" class="player__button">« 10s</button>
+       <button data-skip="10" class="player__button">10s »</button>
+       <button class="fullscreen-btn">FS</button>
+     </div>
+   </div><br></br>
+   <input type="file" accept="video/*" id="upload" onchange="upload()">
+   <button id="start" onclick="start()">Start</button>
+ </center>
+     
+     <script>
+       function upload(){
+        var input=document.getElementById("upload");
+        var freader=new FileReader();
+        freader.readAsDataURL(input.files[0]);
+        freader.onload=function(){
+          document.getElementById("video").src=freader.result;
+        }
+       }
+       function start(){
+        document.getElementById("video").play()
+       }
+     </script>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
