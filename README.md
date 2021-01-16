@@ -5,3 +5,5 @@
 # the project contains two databases which are created by using the php those are the new_task and contactUs
 
 # These databases are used to upload video into the database and for contact form.
+
+# v.html is a video player file 
