@@ -25,25 +25,8 @@ class Contact{
     }
     
     public function sent_mail($to,$subject,$body){
-//$mailFromName="Rohan";
-//$mailFrom="katkar.rohan2001@gmail.com";
-/////////////////////////////////////////////////////////////
-//Mail Header
-//$mailHeader = 'MIME-Version: 1.0'."\r\n";
-//$mailHeader .= "From: $mailFromName <$mailFrom>\r\n";
-//$mailHeader .= "Reply-To: $mailFrom\r\n";
-//$mailHeader .= "Return-Path: $mailFrom\r\n";
-//$mailHeader .= "CC: $mailCC\r\n";
-//$mailHeader .= "BCC: $mailBCC\r\n";
-//$mailHeader .= 'X-Mailer: PHP'.phpversion()."\r\n";
-//$mailHeader .= 'Content-Type: text/html; charset=utf-8'."\r\n";
-/////////////////////////////////////////////////////////////
-//Email to Admin
-//if(mail($to, $subject, $body, $mailHeader)){
- //return true;
- //}else{
-//return false;
- //}
+
+ 
     }
 }
 
